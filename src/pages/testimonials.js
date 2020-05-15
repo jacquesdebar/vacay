@@ -25,8 +25,8 @@ const TestimonialsContainer = styled.div`
     align-items: flex-start;
 `
 
-const TestimonialCard = styled.h2`
-    max-width: 500px;
+const TestimonialCard = styled.div`
+    max-width: 600px;
     padding: 24px;
     padding-bottom: 16px;
     margin: 12px;
@@ -55,29 +55,6 @@ const TestimonialsPage = () => (
                 Testimonials
             </TestimonialsHeader>
             <TestimonialsContainer>
-                <TestimonialCard>
-                    <TestimonialCardName>
-                        Nate, 26
-                    </TestimonialCardName>
-                    <TestimonialCardStory>
-                        I chose to volunteer with Vacay for Democracy because the organization has created an 
-                        effective way for young adults to civically engage in voting-related initiatives while 
-                        also building a lasting community that extends past the end of the trip; the notion that
-                        I would be potentially building a community full of enthusiastic like-minded folks was 
-                        very enticing to me! <br/>
-                        <br/>
-                        Volunteering allowed me to meet like-minded young adults who are also passionate about 
-                        civic engagement and being able to be part of a community revolved around these tenets. 
-                        I loved being able to step outside the comfortable familiarity of my community to learn 
-                        about voting initiatives going on in other states and cities. <br />
-                        <br/>
-                        Young people impacted by the decisions of elected officials and therefore, should have 
-                        an equal say in what goes on. By volunteering, whether it's something canvassing for 
-                        votes or applying to be on a city commission, we're reclaiming some of the agency that 
-                        has been lost through false pre-conceived notions of our ability to contribute to the 
-                        conversation.
-                    </TestimonialCardStory>
-                </TestimonialCard>
                 <TestimonialCard>
                     <TestimonialCardName>
                         Nate, 26
@@ -155,33 +132,6 @@ const TestimonialsPage = () => (
                         matters for me and for people who look like me. I'd like to encourage young people 
                         to get involved with Vacay for Democracy because it's an experience that you won't 
                         regret!
-                    </TestimonialCardStory>
-                </TestimonialCard>
-                <TestimonialCard>
-                    <TestimonialCardName>
-                        Tara, 36
-                    </TestimonialCardName>
-                    <TestimonialCardStory>
-                        I volunteered for Vacay for Democracy, because I’d never been involved with civic action
-                        work and it sounded really fun to be able to travel with a group of fun (hilarious, 
-                        creative, kind, compassionate, the list goes on) and progressive people. I wanted to 
-                        say yes to something that was outside of my comfort zone, and so I could have a hand 
-                        in making a difference. <br/>
-                        <br/>
-                        My experience showed me that talking to neighbors, building connection and supporting 
-                        communities can cause change. The work wasn't as hard or as scary as I thought prior 
-                        to trying it, but it sure is impactful. I am so proud of the work our team did in 
-                        Virginia! <br/>
-                        <br/>
-                        Building relationships with our team was my favorite part of the trip: It's all about 
-                        the people. That's what makes the sense of urgency real, and the impact real. Although 
-                        we worked hard, we never lost sight of having fun together and supporting each other. 
-                        This was such a special group. <br/>
-                        <br/>
-                        Volunteering helped me build my awareness around certain issues I knew little to nothing 
-                        about. Young people have such unique and novel ideas for what we want our future look 
-                        like, it's important we hone our skills and and get involved so that we can be apart 
-                        of creating change! 
                     </TestimonialCardStory>
                 </TestimonialCard>
             </TestimonialsContainer>

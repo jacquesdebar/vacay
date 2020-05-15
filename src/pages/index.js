@@ -72,7 +72,7 @@ const MidText = styled.h2`
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Alternate landing page" />
+    <SEO title="Home" />
     <div>
         <div>
             <BlueBlock>

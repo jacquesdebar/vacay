@@ -7,7 +7,6 @@ import SEO from "../components/seo"
 import Button from "@material-ui/core/Button"
 
 import styled from '@emotion/styled'
-import { jsx, css } from '@emotion/core';
 
 const BlueBlock = styled.div`
     width: 100%;
@@ -50,6 +49,18 @@ const TextOver = styled.h1`
     }
 `
 
+const MidDiv = styled.div`
+    width: 90%;
+    max-width: 800px;
+    margin: 96px auto;
+`
+
+const MidText = styled.h2`
+    color: #F03265;
+    font-family: Helvetica;
+    font-weight: bold;
+`
+
 const NewLanding = ({ data }) => (
   <Layout>
     <SEO title="Alternate landing page" />
@@ -66,12 +77,19 @@ const NewLanding = ({ data }) => (
                                 backgroundColor: `#F03265`,
                                 padding: `12px 24px`,
                             }}
+                            css="" // <-- DO NOT REMOVE
                             variant="contained" 
                         >Sign Up</Button>
                     </TextOverDiv>
                 </ColumnsPart>
 
             </BlueBlock>
+            <MidDiv>
+                <MidText>
+                    Vacay for Democracy sends canvassers to swing states, working to equip voters with the 
+                    tools and information they need to vote with confidence in the 2020 election.
+                </MidText>
+            </MidDiv>
 
         </div>
     </div>

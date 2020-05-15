@@ -1,170 +1,147 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import Box from "@material-ui/core/Box";
-import Card from "@material-ui/core/Card";
-import CardActions from "@material-ui/core/CardActions";
-import CardContent from "@material-ui/core/CardContent";
-import Button from "@material-ui/core/Button";
-import Typography from "@material-ui/core/Typography";
-import CardActionArea from '@material-ui/core/CardActionArea';
-import CardMedia from '@material-ui/core/CardMedia';
+import SEO from "../components/seo"
+import styled from '@emotion/styled'
+import Layout from "../components/layout";
+import { graphql } from "gatsby"
+import Img from "gatsby-image"
 
-const useStyles = makeStyles(theme => ({
-  root: {
-    flexGrow: 1,
-    backgroundColor: "#F9F8F8",
-    //minHeight: "74vh",
-  },
-  media:{
-    height:140,
-  },
-  pageTitle: {
-    textAlign: "center",
-    margin: 48,
-    fontWeight: "bold",
-    fontStyle: "italic",
-    fontWeight:"bold"
-  },
-  cardsDiv: {
-    width: "90%",
-    marginLeft: "auto",
-    marginRight: "auto",
-    marginBottom: "48px",
-    display: "flex",
-    flexFlow: "row wrap",
-    justifyContent: "center"
-  },
-  card: {
-    maxWidth: 500,
+const TrainingContainer = styled.div`
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 48px 0;
+`
 
-    // width: 275,
-    // height: 300,
-    display: "inline-block",
-    margin: 16,
-    backgroundColor: "#014378",
-    color:"white",
-    "&:hover": {
-      color: "white",
-      backgroundColor: "##F03265"
+const TrainingHeader = styled.h1`
+    color: #06182a;
+`
+
+const TrainingCardsContainer = styled.div`
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-start;
+`
+
+const TrainingCard = styled.div`
+    max-width: 600px;
+    margin: 24px;
+    border-radius: 10px;
+    background-color: #023660;
+    color: white;
+    font-family: Helvetica, sans-serif;
+`
+
+const TrainingCardTopHalf = styled(Img)`
+    height: 160px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+`
+
+const TrainingCardBottomHalf = styled.div`
+    padding: 18px;
+`
+
+const TrainingCardTitle = styled.h2`
+    font-weight: bold;
+`
+
+const TrainingCardDescription = styled.p`
+    font-weight: normal;
+`
+
+const TrainingPage = ({ data }) => (
+    <Layout>
+        <SEO title="Testimonials" />
+        <TrainingContainer>
+            <TrainingHeader>
+                Training modules
+            </TrainingHeader>
+            <TrainingCardsContainer>
+                <TrainingCard>
+                    <TrainingCardTopHalf fluid={data.m1bg.childImageSharp.fluid} />
+                    <TrainingCardBottomHalf>
+                        <TrainingCardTitle>
+                            Module 1: Packing
+                        </TrainingCardTitle>
+                        <TrainingCardDescription>
+                            Learn some tips for packing, as well as how to mentally prepare for the trip
+                        </TrainingCardDescription>
+                    </TrainingCardBottomHalf>
+                </TrainingCard>
+                <TrainingCard>
+                    <TrainingCardTopHalf fluid={data.m2bg.childImageSharp.fluid} />
+                    <TrainingCardBottomHalf>
+                        <TrainingCardTitle>
+                            Module 2: Canvassing
+                        </TrainingCardTitle>
+                        <TrainingCardDescription>
+                            Learn about what canvassing is, how to interact with locals,
+                            and what a day looks like on the trip
+                        </TrainingCardDescription>
+                    </TrainingCardBottomHalf>
+                </TrainingCard>
+                <TrainingCard>
+                    <TrainingCardTopHalf fluid={data.m3bg.childImageSharp.fluid} />
+                    <TrainingCardBottomHalf>
+                        <TrainingCardTitle>
+                            Module 3: Vacationing
+                        </TrainingCardTitle>
+                        <TrainingCardDescription>
+                            Learn more about the community and culture surrounding your trip destination
+                        </TrainingCardDescription>
+                    </TrainingCardBottomHalf>
+                </TrainingCard>
+                <TrainingCard>
+                    <TrainingCardTopHalf fluid={data.m4bg.childImageSharp.fluid} />
+                    <TrainingCardBottomHalf>
+                        <TrainingCardTitle>
+                            Module 4: Gamplanning
+                        </TrainingCardTitle>
+                        <TrainingCardDescription>
+                            Learn how your team leads will go about planning and what you can do to coordinate with them
+                        </TrainingCardDescription>
+                    </TrainingCardBottomHalf>
+                </TrainingCard>
+            </TrainingCardsContainer>
+        </TrainingContainer>
+    </Layout>
+)
+
+export const query = graphql`
+{
+  m1bg: file(relativePath: { eq: "m1bg.jpg" }) {
+    childImageSharp {
+      fluid(maxWidth: 800) {
+        ...GatsbyImageSharpFluid
+      }
     }
   },
-  title: {
-    fontSize: 14
+  m2bg: file(relativePath: { eq: "m2bg.jpg" }) {
+    childImageSharp {
+      fluid(maxWidth: 800) {
+        ...GatsbyImageSharpFluid
+      }
+    }
   },
-  pos: {
-    marginBottom: 24
-  }
-}));
-  
-
-export default function Landing() {
-  const classes = useStyles();
-
-  return (
-    <div className={classes.root}>
-      <div style={{ height: 100 }} />
-      <Typography variant="h2" className={classes.pageTitle}>
-        Training Modules
-      </Typography>
-      <Box className={classes.cardsDiv}>
-        <a href="/module-01">
-          <Card className={classes.card}>
-            <CardActionArea>
-              <CardMedia
-                className={classes.media}
-                image="https://imgur.com/Pk9nTvA.jpg"
-                title="Packing"
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="h2">
-                  Module 1: Packing
-                </Typography>
-                <Typography>
-                  Learn some tips for packing, as well as how to mentally prepare for the trip
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-          {/* <CardActions>
-            <Button size="small" color="white">
-              Learn More
-            </Button>        
-           </CardActions> */}
-          </Card> 
-        </a>
-        <a href="/module-02">
-          <Card className={classes.card}>
-            <CardActionArea>
-              <CardMedia
-                className={classes.media}
-                image="https://imgur.com/dW4ILMh.jpg"
-                title="Canvassing"
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="h2">
-                  Module 2: Canvassing
-                </Typography>
-                <Typography>
-                  Learn about what canvassing is, how to interact with locals,
-                  and what a day looks like on the trip
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-          {/* <CardActions>
-            <Button size="small" color="primary">
-              Learn More
-            </Button>        
-           </CardActions> */}
-          </Card> 
-        </a>
-        <a href="/module-03">
-          <Card className={classes.card}>
-            <CardActionArea>
-              <CardMedia
-                className={classes.media}
-                image="https://imgur.com/Ci2x3bG.jpg"
-                title="Things to do"
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="h2">
-                  Module 3: Vacationing
-                </Typography>
-                <Typography>
-                  Learn more about the community and culture surrounding your trip destination
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-          {/* <CardActions>
-            <Button size="small" color="primary">
-              Learn More
-            </Button>        
-           </CardActions> */}
-          </Card> 
-        </a>
-        <a href="/module-04">
-          <Card className={classes.card}>
-            <CardActionArea>
-              <CardMedia
-                className={classes.media}
-                image="https://imgur.com/f3w3L5z.jpg"
-                title="planning"
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="h2">
-                  Module 4: Gameplanning
-                </Typography>
-                <Typography>
-                  Learn how your team leads will go about planning and what you can do to coordinate with them
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-          {/* <CardActions>
-            <Button size="small" color="primary">
-              Learn More
-            </Button>        
-           </CardActions> */}
-          </Card>
-        </a>
-      </Box>
-    </div>
-  );
+  m3bg: file(relativePath: { eq: "m3bg.jpg" }) {
+    childImageSharp {
+      fluid(maxWidth: 800) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  },
+  m4bg: file(relativePath: { eq: "m4bg.jpg" }) {
+    childImageSharp {
+      fluid(maxWidth: 800) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  },
 }
+`
+
+export default TrainingPage

@@ -4,7 +4,7 @@ import styled from '@emotion/styled'
 import Layout from "../components/layout";
 
 
-const AboutContainer = styled.div`
+const TestimonialsPageContainer = styled.div`
     width: 90%;
     margin-left: auto;
     margin-right: auto;
@@ -14,7 +14,7 @@ const AboutContainer = styled.div`
     padding: 48px 0;
 `
 
-const AboutHeader = styled.h1`
+const TestimonialsHeader = styled.h1`
     color: #06182a;
 `
 
@@ -36,7 +36,7 @@ const TestimonialCard = styled.h2`
 `
 
 const TestimonialCardName = styled.h2`
-    font-weight: bold; !important
+    font-weight: bold;
 `
 
 const TestimonialCardStory = styled.p`
@@ -47,10 +47,10 @@ const TestimonialCardStory = styled.p`
 const TestimonialsPage = () => (
     <Layout>
         <SEO title="Testimonials" />
-        <AboutContainer>
-            <AboutHeader>
+        <TestimonialsPageContainer>
+            <TestimonialsHeader>
                 Testimonials
-            </AboutHeader>
+            </TestimonialsHeader>
             <TestimonialsContainer>
                 <TestimonialCard>
                     <TestimonialCardName>
@@ -132,7 +132,7 @@ const TestimonialsPage = () => (
                     </TestimonialCardStory>
                 </TestimonialCard>
             </TestimonialsContainer>
-        </AboutContainer>
+        </TestimonialsPageContainer>
     </Layout>
 )
 

@@ -30,7 +30,7 @@ const BackgroundSection = ({ className }) => (
         >
             <TextFlex>
                 <WhyText>
-                    Why Vacay for Democracy?<br /><span role="img" alt="thinking emoji">🤔</span>
+                    Why Vacay for Democracy?<br /><span role="img" alt="thinking emoji" aria-label="emoji">🤔</span>
                 </WhyText>
                 <Button 
                     color="primary" 

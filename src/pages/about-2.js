@@ -29,6 +29,7 @@ const AboutImageContainer = styled.div`
     width: 80%;
     padding-top: 12px;
     padding-bottom: 12px;
+    margin-bottom: 24px;
 
     @media (max-width: 900px) {
         width: 100%;

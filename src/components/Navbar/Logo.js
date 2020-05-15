@@ -18,7 +18,7 @@ const Logo = () => {
     query {
       file(name: { eq: "VforDNav2" }, extension: { eq: "png" }) {
         childImageSharp {
-          fluid(maxWidth: 300, pngQuality: 80) {
+          fluid(maxWidth: 800, pngQuality: 80) {
             ...GatsbyImageSharpFluid
           }
         }

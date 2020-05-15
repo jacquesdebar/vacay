@@ -2,9 +2,11 @@ import React from "react"
 
 import Layout from "../components/layout"
 import ColumnsImage from "../components/ColumnsImage"
+import MicImage from "../components/MicImage.js"
 // import Image from "../components/Image"
 import SEO from "../components/seo"
 import Button from "@material-ui/core/Button"
+
 
 import styled from '@emotion/styled'
 
@@ -43,6 +45,7 @@ const TextOver = styled.h1`
     font-size: 50px;
     font-style: italic;
     padding: 10px;
+    margin-bottom: 12px;
 
     @media (max-width: 900px) {
         font-size: 24px;
@@ -73,11 +76,12 @@ const NewLanding = ({ data }) => (
                         <TextOver>Empowering voters where it matters most.</TextOver>
                         <Button 
                             color="primary" 
+                            css="" // <-- DO NOT REMOVE
+                            href="/"
                             style={{
                                 backgroundColor: `#F03265`,
                                 padding: `12px 24px`,
                             }}
-                            css="" // <-- DO NOT REMOVE
                             variant="contained" 
                         >Sign Up</Button>
                     </TextOverDiv>
@@ -90,6 +94,7 @@ const NewLanding = ({ data }) => (
                     tools and information they need to vote with confidence in the 2020 election.
                 </MidText>
             </MidDiv>
+            <MicImage />
 
         </div>
     </div>

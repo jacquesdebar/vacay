@@ -28,6 +28,7 @@ const TestimonialsContainer = styled.div`
 const TestimonialCard = styled.h2`
     max-width: 600px;
     padding: 24px;
+    padding-bottom: 16px;
     margin: 12px;
     border-radius: 10px;
     background-color: #023660;
@@ -37,10 +38,12 @@ const TestimonialCard = styled.h2`
 
 const TestimonialCardName = styled.h2`
     font-weight: bold;
+    margin-bottom: 12px;
 `
 
 const TestimonialCardStory = styled.p`
     font-weight: normal;
+    font-size: 14pt;
 `
 
 

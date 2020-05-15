@@ -1,13 +1,9 @@
 import React from "react"
-
 import Layout from "../components/layout"
 import ColumnsImage from "../components/ColumnsImage"
 import MicImage from "../components/MicImage.js"
-// import Image from "../components/Image"
 import SEO from "../components/seo"
 import Button from "@material-ui/core/Button"
-
-
 import styled from '@emotion/styled'
 
 const BlueBlock = styled.div`

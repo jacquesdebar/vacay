@@ -114,7 +114,7 @@ const TrainingPage = ({ data }) => (
                         <TrainingCardTopHalf fluid={data.m4bg.childImageSharp.fluid} />
                         <TrainingCardBottomHalf>
                             <TrainingCardTitle>
-                                Module 4: Gamplanning
+                                Module 4: Gameplanning
                             </TrainingCardTitle>
                             <TrainingCardDescription>
                                 Learn how your team leads will go about planning and what you can do to coordinate with them

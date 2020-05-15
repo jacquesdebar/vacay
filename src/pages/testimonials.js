@@ -26,7 +26,7 @@ const TestimonialsContainer = styled.div`
 `
 
 const TestimonialCard = styled.h2`
-    max-width: 600px;
+    max-width: 500px;
     padding: 24px;
     padding-bottom: 16px;
     margin: 12px;

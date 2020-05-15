@@ -6,6 +6,7 @@ import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
+import SEO from "../components/seo"
 
 import Layout from "../components/layout";
 
@@ -52,6 +53,7 @@ export default function Landing() {
 
   return (
     <Layout className={classes.root}>
+      <SEO title="Training" />
       <Typography variant="h2" className={classes.pageTitle}>
         Training Modules
       </Typography>

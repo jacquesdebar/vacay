@@ -49,6 +49,7 @@ export default function About() {
     const classes = useStyles();
     return (<Layout className={classes.root}>
         
+      <SEO title="About" />
 
         <Box
           className={classes.heading}

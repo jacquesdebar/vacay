@@ -2,6 +2,7 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import Box from "@material-ui/core/Box";
+import SEO from "../components/seo"
 
 import Layout from "../components/layout";
 
@@ -34,6 +35,8 @@ export default function Testimonials() {
     const classes = useStyles();
     return (
         <Layout className={classes.root}>
+
+      <SEO title="Testimonials" />
 
 <Box className={classes.cardsDiv}>
                 <Grid container className={classes.gridContainer}>

@@ -2,7 +2,7 @@ import React from "react";
 import SEO from "../components/seo"
 import styled from '@emotion/styled'
 import Layout from "../components/layout";
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import Img from "gatsby-image"
 
 const TrainingContainer = styled.div`
@@ -26,13 +26,21 @@ const TrainingCardsContainer = styled.div`
     align-items: flex-start;
 `
 
+const CardLink = styled(Link)`
+    text-decoration: none;
+    margin: 24px;
+`
+
 const TrainingCard = styled.div`
     max-width: 600px;
-    margin: 24px;
     border-radius: 10px;
     background-color: #023660;
     color: white;
     font-family: Helvetica, sans-serif;
+
+    :hover {
+        background-color: #F03265;
+    }
 `
 
 const TrainingCardTopHalf = styled(Img)`
@@ -61,51 +69,59 @@ const TrainingPage = ({ data }) => (
                 Training modules
             </TrainingHeader>
             <TrainingCardsContainer>
-                <TrainingCard>
-                    <TrainingCardTopHalf fluid={data.m1bg.childImageSharp.fluid} />
-                    <TrainingCardBottomHalf>
-                        <TrainingCardTitle>
-                            Module 1: Packing
-                        </TrainingCardTitle>
-                        <TrainingCardDescription>
-                            Learn some tips for packing, as well as how to mentally prepare for the trip
-                        </TrainingCardDescription>
-                    </TrainingCardBottomHalf>
-                </TrainingCard>
-                <TrainingCard>
-                    <TrainingCardTopHalf fluid={data.m2bg.childImageSharp.fluid} />
-                    <TrainingCardBottomHalf>
-                        <TrainingCardTitle>
-                            Module 2: Canvassing
-                        </TrainingCardTitle>
-                        <TrainingCardDescription>
-                            Learn about what canvassing is, how to interact with locals,
-                            and what a day looks like on the trip
-                        </TrainingCardDescription>
-                    </TrainingCardBottomHalf>
-                </TrainingCard>
-                <TrainingCard>
-                    <TrainingCardTopHalf fluid={data.m3bg.childImageSharp.fluid} />
-                    <TrainingCardBottomHalf>
-                        <TrainingCardTitle>
-                            Module 3: Vacationing
-                        </TrainingCardTitle>
-                        <TrainingCardDescription>
-                            Learn more about the community and culture surrounding your trip destination
-                        </TrainingCardDescription>
-                    </TrainingCardBottomHalf>
-                </TrainingCard>
-                <TrainingCard>
-                    <TrainingCardTopHalf fluid={data.m4bg.childImageSharp.fluid} />
-                    <TrainingCardBottomHalf>
-                        <TrainingCardTitle>
-                            Module 4: Gamplanning
-                        </TrainingCardTitle>
-                        <TrainingCardDescription>
-                            Learn how your team leads will go about planning and what you can do to coordinate with them
-                        </TrainingCardDescription>
-                    </TrainingCardBottomHalf>
-                </TrainingCard>
+                <CardLink to="/module-2">
+                    <TrainingCard>
+                        <TrainingCardTopHalf fluid={data.m1bg.childImageSharp.fluid} />
+                        <TrainingCardBottomHalf>
+                            <TrainingCardTitle>
+                                Module 1: Packing
+                            </TrainingCardTitle>
+                            <TrainingCardDescription>
+                                Learn some tips for packing, as well as how to mentally prepare for the trip
+                            </TrainingCardDescription>
+                        </TrainingCardBottomHalf>
+                    </TrainingCard>
+                </CardLink>
+                <CardLink to="/module-2">
+                    <TrainingCard>
+                        <TrainingCardTopHalf fluid={data.m2bg.childImageSharp.fluid} />
+                        <TrainingCardBottomHalf>
+                            <TrainingCardTitle>
+                                Module 2: Canvassing
+                            </TrainingCardTitle>
+                            <TrainingCardDescription>
+                                Learn about what canvassing is, how to interact with locals,
+                                and what a day looks like on the trip
+                            </TrainingCardDescription>
+                        </TrainingCardBottomHalf>
+                    </TrainingCard>
+                </CardLink>
+                <CardLink to="/module-2">
+                    <TrainingCard>
+                        <TrainingCardTopHalf fluid={data.m3bg.childImageSharp.fluid} />
+                        <TrainingCardBottomHalf>
+                            <TrainingCardTitle>
+                                Module 3: Vacationing
+                            </TrainingCardTitle>
+                            <TrainingCardDescription>
+                                Learn more about the community and culture surrounding your trip destination
+                            </TrainingCardDescription>
+                        </TrainingCardBottomHalf>
+                    </TrainingCard>
+                </CardLink>
+                <CardLink to="/module-2">
+                    <TrainingCard>
+                        <TrainingCardTopHalf fluid={data.m4bg.childImageSharp.fluid} />
+                        <TrainingCardBottomHalf>
+                            <TrainingCardTitle>
+                                Module 4: Gamplanning
+                            </TrainingCardTitle>
+                            <TrainingCardDescription>
+                                Learn how your team leads will go about planning and what you can do to coordinate with them
+                            </TrainingCardDescription>
+                        </TrainingCardBottomHalf>
+                    </TrainingCard>
+                </CardLink>
             </TrainingCardsContainer>
         </TrainingContainer>
     </Layout>

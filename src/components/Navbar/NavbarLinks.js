@@ -64,7 +64,8 @@ border-radius: 5px;
 }
 
 @media (max-width: 768px) {
-  padding: 20px 0;
+  padding: 16px 20px;
+  margin-top: 12px;
   font-size: 1.5rem;
   z-index: 6;
 }

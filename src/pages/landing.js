@@ -3,7 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Box from "@material-ui/core/Box";
 import Button from "@material-ui/core/Button";
 import CapstoneInfo from "../components/capstoneinfo";
-import Layout from "../components/Layout";
+import Layout from "../components/layout";
 import { useIdentityContext } from "react-netlify-identity";
 
 import IdentityModal from "react-netlify-identity-widget";
@@ -13,6 +13,10 @@ const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
     backgroundColor: "#F9F8F8"
+  },
+  midpanel: {
+      marginLeft: `400px`,
+      backgroundColor: `red`
   },
   ex: {
     height: "850px",
@@ -148,6 +152,7 @@ export default function Landing() {
 
   return (
     <Layout className={classes.root}>
+        <Box className={classes.midPanel}>
       <Box className={classes.colorBlock}  style={{
           display: "flex",
           flexDirection: "row",
@@ -178,6 +183,7 @@ export default function Landing() {
           </Button>
         </a>
         </Box>
+      </Box>
       </Box>
 
      

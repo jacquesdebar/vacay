@@ -67,7 +67,7 @@ const useStyles = makeStyles(theme => ({
   topImg: {
     height: "auto",
     width: "700px",
-    marginLeft: "100px",
+    marginLeft: "20%",
     marginTop: "100px",
     marginBottom: "100px"
   },

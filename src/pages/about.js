@@ -28,13 +28,16 @@ const useStyles = makeStyles(theme => ({
       height: "auto",
       width: "450px",
       marginTop: "50px",
+      marginLeft: "auto",
+      marginRight: "auto",
      // marginRight: "20",
      // marginLeft: "50px",
       position: "relative",
       zIndex: "2"
     },
     textBox: {
-      width: "475px",
+      width: "90%",
+      maxWidth: "800px",
       display: "inline-block",
       //flexDirection: "row",
       //flexWrap: "wrap-reverse",
@@ -47,10 +50,10 @@ const useStyles = makeStyles(theme => ({
 
 export default function About() {
     const classes = useStyles();
-    return (<Layout className={classes.root}>
-        
-      <SEO title="About" />
-
+    return (
+    
+      <Layout className={classes.root}>
+        <SEO title="About" />
         <Box
           className={classes.heading}
           style={{

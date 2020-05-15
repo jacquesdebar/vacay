@@ -1,136 +1,79 @@
-import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import Box from "@material-ui/core/Box";
-import Grid from "@material-ui/core/Grid";
-import TextField from "@material-ui/core/TextField";
+import React from "react"
+import styled from '@emotion/styled'
 
-const useStyles = makeStyles(theme => ({
-  root: {
-    flexGrow: 1,
-    backgroundColor: "#022842",
-    borderTop: "3.5px solid #F03265"
-  },
-  gridContainer: {
-    padding: theme.spacing(4),
-    textAlign: "left",
-    color: "#FFFFFF"
-  },
-  emailContainer: {
-    paddingLeft: "10px"
-  },
-  emailInput: {
-    marginTop: "10px",
-    padding: "7px",
-    textAlign: "left",
-    fontWeight: "10"
-  },
-  links: {
-    color: "inherit",
-    textDecoration: "none"
-  },
-  h2: {
-    color: "#F03265"
-  },
-  newsletterField: {
-    "&:hover $notchedOutline": {
-      borderColor: "white",
-      color: "white"
+const OverallFooter = styled.footer`
+    background-color: #022842;
+    border-top: 3.5px solid #F03265;
+    color: white;
+    height: 100%;
+`
+const FooterDiv = styled.div`
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+
+    width: 90%;
+    padding: 24px;
+    padding-bottom: 12px;
+
+    @media (max-width: 900px) {
+        flex-direction: column;
     }
-  },
-  notchedOutline: {}
-}));
+`
 
-export default function Footer() {
-  const classes = useStyles();
+const FooterArea = styled.div`
+    display: flex;
+    flex-direction: column;
+    padding: 12px 24px;
+    max-width: 500px;
+`
 
-  const InputProps = {
-    classes: {
-      input: classes.newsletterField,
-      notchedOutline: classes.notchedOutline
+const FooterHeading = styled.h3`
+    color: #F03265
+`
+
+const FooterBody = styled.p`
+    color: white;
+`
+
+const FooterLink = styled.a`
+    color: white;
+
+    :hover {
+        color: #F03265;
     }
-  };
+`
 
-  return (
-    <div className={classes.root}>
-      <Box
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          height: "100%"
-        }}
-      >
-        <Grid container className={classes.gridContainer}>
-          <Grid item xs={12} md={6} className={classes.emailContainer}>
-            <h2 className={classes.h2}>Join the list</h2>
-            <p>
-              Need more information? Subscribe to our monthly newsletter to
-              recieve updates
-              <br />
-              on upcoming trips and the latest from Vacay for Democracy.
-              <br />
-            </p>
+const Footer = () => (
+  <OverallFooter>
+    <FooterDiv>
+        <FooterArea>
+            <FooterHeading>Join the list</FooterHeading>
+            <FooterBody>
+                Need more information? Subscribe to our monthly newsletter to recieve updates
+                on upcoming trips and the latest from Vacay for Democracy.
+            </FooterBody>
+        </FooterArea>
+        <FooterArea>
+            <FooterHeading>Contact</FooterHeading>
+            <FooterBody>
+                1411 4th Avenue Suite 1000 <br/>
+                Seattle, WA 98101 <br/>
+                <br/>
+                <FooterLink href="mailto:hello@commonpurposenow.org" target="_top">hello@cpnxt.org</FooterLink>
+            </FooterBody>
+        </FooterArea>
+        <FooterArea>
+            <FooterHeading>Follow us</FooterHeading>
+            <FooterBody>
+                <FooterLink href="https://www.instagram.com/cpnxt/" target="_top">Instagram</FooterLink><br/>
+                <FooterLink href="https://twitter.com/cpnxt" target="_top">Twitter</FooterLink><br/>
+                <FooterLink href="https://www.moreperfectaf.com/" target="_top">Podcast</FooterLink>
+            </FooterBody>
+        </FooterArea>
+    </FooterDiv>
+  </OverallFooter>
+)
 
-            <form noValidate autoComplete="off">
-              <TextField
-                id="newsletter"
-                label="Your email"
-                variant="outlined"
-                className={classes.newsletterField}
-                InputProps={InputProps}
-              />
-            </form>
-          </Grid>
-          <Grid item xs={12} md={3}>
-            <h2 className={classes.h2}>Contact</h2>
-            <p>
-              1411 4th Avenue Suite 1000
-              <br />
-              Seattle, WA 98101
-            </p>
-            <p>
-              <a
-                href="mailto:hello@commonpurposenow.org"
-                target="_top"
-                className={classes.links}
-              >
-                hello@cpnxt.org
-              </a>
-            </p>
-          </Grid>
-          <Grid item xs={12} md={3}>
-            <h2 className={classes.h2}>Follow us</h2>
-            <p>
-              <a
-                href="https://www.instagram.com/cpnxt/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={classes.links}
-              >
-                Instagram
-              </a>
-              <br />
-              <a
-                href="https://twitter.com/cpnxt"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={classes.links}
-              >
-                Twitter
-              </a>
-              <br />
-              <a
-                href="https://www.moreperfectaf.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={classes.links}
-              >
-                Podcast
-              </a>
-            </p>
-          </Grid>
-        </Grid>
-      </Box>
-    </div>
-  );
-}
+export default Footer

@@ -38,6 +38,7 @@ const TextOverDiv = styled.div`
 const TextOver = styled.h1`
     color: white;
     background-color: #F03265;
+    border-radius: 5px;
     font-size: 50px;
     font-style: italic;
     padding: 10px;

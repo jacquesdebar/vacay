@@ -39,6 +39,7 @@ const FooterBody = styled.p`
 
 const FooterLink = styled.a`
     color: white;
+    text-decoration: none;
 
     :hover {
         color: #F03265;

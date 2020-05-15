@@ -9,13 +9,17 @@ const Navigation = styled.nav`
   height: 10vh;
   display: flex;
   background-color: #fff;
-  position: relative;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  left: 0;
   justify-content: space-between;
   text-transform: uppercase;
-  border-bottom: 2px solid #33333320;
+  border-bottom: 2px solid #023660;
   margin: 0 auto;
   padding: 0 5vw;
-  z-index: 2;
+  z-index: 999;
   align-self: center;
 
   @media (max-width: 768px) {

@@ -1,14 +1,9 @@
-import React from "react"
-import { Link } from "gatsby"
-
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
-
+import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Box from "@material-ui/core/Box";
 import Button from "@material-ui/core/Button";
 import CapstoneInfo from "../components/capstoneinfo";
+import Layout from "../components/Layout";
 import { useIdentityContext } from "react-netlify-identity";
 
 import IdentityModal from "react-netlify-identity-widget";
@@ -144,8 +139,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-
-const IndexPage = () => {
+export default function Landing() {
   const [popup, changePopup] = React.useState(false);
 //   const identity = useIdentityContext();
 //   console.log(identity);
@@ -154,7 +148,6 @@ const IndexPage = () => {
 
   return (
     <Layout className={classes.root}>
-      <SEO title="Home" />
       <Box className={classes.colorBlock}  style={{
           display: "flex",
           flexDirection: "row",
@@ -352,5 +345,3 @@ const IndexPage = () => {
     </Layout>
   );
 }
-
-export default IndexPage

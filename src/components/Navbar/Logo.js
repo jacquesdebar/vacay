@@ -16,7 +16,7 @@ const LogoWrap = styled.div`
 const Logo = () => {
   const data = useStaticQuery(graphql`
     query {
-      file(name: { eq: "VforDNav" }, extension: { eq: "png" }) {
+      file(name: { eq: "VforDNav2" }, extension: { eq: "png" }) {
         childImageSharp {
           fluid(maxWidth: 300, pngQuality: 80) {
             ...GatsbyImageSharpFluid

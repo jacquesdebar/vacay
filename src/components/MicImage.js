@@ -67,6 +67,7 @@ const TextFlex = styled.div`
 `
 
 const WhyText = styled.h2`
+    width: 90%;
     color: white;
     font-size: 50px;
     text-transform: uppercase;

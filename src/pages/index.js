@@ -1,7 +1,7 @@
 import React from "react"
 import Layout from "../components/layout"
 import ColumnsImage from "../components/ColumnsImage"
-import MicImage from "../components/MicImage.js"
+import MicImage from "../components/MicImage"
 import SEO from "../components/seo"
 import Button from "@material-ui/core/Button"
 import styled from '@emotion/styled'
@@ -20,6 +20,14 @@ const ColumnsPart = styled.div`
     
     @media (max-width: 900px) {
         padding-bottom: 24px;
+    }
+`
+
+const ColumnsImageContainer = styled.div`
+    width: 65%;
+
+    @media (max-width: 900px) {
+        width: 80%;
     }
 `
 
@@ -69,7 +77,9 @@ const IndexPage = () => (
         <div>
             <BlueBlock>
                 <ColumnsPart>
-                    <ColumnsImage />
+                    <ColumnsImageContainer>
+                        <ColumnsImage />
+                    </ColumnsImageContainer>
                     <TextOverDiv>
                         <TextOver>Empowering voters where it matters most.</TextOver>
                         <Button 

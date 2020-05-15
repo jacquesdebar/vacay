@@ -1,11 +1,10 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import Box from "@material-ui/core/Box";
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import styled from '@emotion/styled'
 
-import AboutImages from "../components/AboutImages.js"
+import ColumnsImage from "../components/ColumnsImage"
+import MicManImage from "../components/MicManImage"
 
 const AboutContainer = styled.div`
     width: 90%;
@@ -23,7 +22,17 @@ const AboutHeader = styled.h1`
 `
 
 const AboutBody = styled.p`
-    // margin-bottom: 48px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+`
+const AboutImageContainer = styled.div`
+    width: 80%;
+    padding-top: 12px;
+    padding-bottom: 12px;
+
+    @media (max-width: 900px) {
+        width: 100%;
+    }
 `
 
 const MissionText = styled.p`
@@ -50,7 +59,12 @@ const AboutPage = () => (
                     for election.
                 </AboutBody>
             </div>
-            <AboutImages />
+            <AboutImageContainer>
+                <ColumnsImage />
+            </AboutImageContainer>
+            <AboutImageContainer>
+                <MicManImage />
+            </AboutImageContainer>
             <AboutBody>
                 Democracy is based on the principle of “people’s sovereignty”, in
                 other words, citizens in America can form and diffuse authority of

@@ -13,10 +13,10 @@ import Img from "gatsby-image"
  * - `useStaticQuery`: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-const ColumnsImage = () => {
+const MicManImage = () => {
   const data = useStaticQuery(graphql`
     query {
-      columns: file(relativePath: { eq: "columns.jpg" }) {
+      micman: file(relativePath: { eq: "mic2.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1500) {
             ...GatsbyImageSharpFluid
@@ -26,7 +26,7 @@ const ColumnsImage = () => {
     }
   `)
 
-  return <Img fluid={data.columns.childImageSharp.fluid}/>
+  return <Img fluid={data.micman.childImageSharp.fluid}/>
 }
 
-export default ColumnsImage
+export default MicManImage

@@ -4,7 +4,7 @@ import SEO from "../components/seo"
 import styled from '@emotion/styled'
 import Button from "@material-ui/core/Button"
 
-import WhatsNextImage from "../components/WhatsNextImage"
+import WhatsNextChartImage from "../components/WhatsNextChartImage"
 
 const ModuleContainer = styled.div`
     width: 90%;
@@ -76,7 +76,7 @@ const Module2 = () => (
             </ModuleBody>
             <br/>
             <ModuleImageContainer>
-                <WhatsNextImage />
+                <WhatsNextChartImage />
             </ModuleImageContainer>
             <ModuleBody>
                 <ModuleSectionHeader>Let's work</ModuleSectionHeader>

@@ -13,7 +13,7 @@ import Img from "gatsby-image"
  * - `useStaticQuery`: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-const WhatsNextImage = () => {
+const WhatsNextChartImage = () => {
   const data = useStaticQuery(graphql`
     query {
         whatsNext: file(relativePath: { eq: "whatsNext.png" }) {
@@ -29,4 +29,4 @@ const WhatsNextImage = () => {
   return <Img fluid={data.whatsNext.childImageSharp.fluid}/>
 }
 
-export default WhatsNextImage
+export default WhatsNextChartImage

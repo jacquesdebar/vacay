@@ -16,7 +16,7 @@ const TrainingContainer = styled.div`
 `
 
 const TrainingHeader = styled.h1`
-    color: #06182a;
+    color: #022842;
 `
 
 const TrainingCardsContainer = styled.div`

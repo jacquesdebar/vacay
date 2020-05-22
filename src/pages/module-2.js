@@ -20,6 +20,7 @@ const ModuleContainer = styled.div`
 const ModuleHeader = styled.h1`
     color: #06182a;
     max-width: 900px;
+    color: #022842;
 `
 
 const ModuleVideo = styled.iframe`
@@ -32,12 +33,14 @@ const ModuleBody = styled.p`
     padding-top: 12px;
     padding-bottom: 12px;
     max-width: 900px;
+    color: #022842;
 `
 
 const ModuleSectionHeader = styled.h2`
     font-family: 'Helvetica', sans-serif;
     font-weight: bold;
-    margin-bottom: 8px
+    margin-bottom: 8px;
+    color: #022842;
 
 `
 

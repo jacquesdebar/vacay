@@ -1,6 +1,10 @@
 import React from "react";
 import styled from '@emotion/styled'
 
+import NateImage from "./NateImage"
+import TaraImage from "./TaraImage"
+import FaizaImage from "./FaizaImage"
+
 
 const TestimonialsPageContainer = styled.div`
     width: 90%;
@@ -24,6 +28,17 @@ const TestimonialsContainer = styled.div`
     flex-flow: row wrap;
     justify-content: center;
     align-items: flex-start;
+`
+
+const TestimonialsImageContainer = styled.div`
+    width: 80%;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    margin-bottom: 24px;
+
+    @media (max-width: 900px) {
+        width: 100%;
+    }
 `
 
 const TestimonialCard = styled.div`
@@ -54,6 +69,9 @@ const TestimonialsContent = () => (
                 Testimonials
             </TestimonialsHeader>
             <TestimonialsContainer>
+                <TestimonialsImageContainer>
+                    <NateImage />
+                </TestimonialsImageContainer>
                 <TestimonialCard>
                     <TestimonialCardName>
                         Nate, 26
@@ -77,6 +95,9 @@ const TestimonialsContent = () => (
                         conversation.
                     </TestimonialCardStory>
                 </TestimonialCard>
+                <TestimonialsImageContainer>
+                    <TaraImage />
+                </TestimonialsImageContainer>
                 <TestimonialCard>
                     <TestimonialCardName>
                         Tara, 36
@@ -104,6 +125,9 @@ const TestimonialsContent = () => (
                         of creating change! 
                     </TestimonialCardStory>
                 </TestimonialCard>
+                <TestimonialsImageContainer>
+                    <FaizaImage />
+                </TestimonialsImageContainer>
                 <TestimonialCard>
                     <TestimonialCardName>
                         Faiza, 25

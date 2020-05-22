@@ -9,9 +9,30 @@ import styled from '@emotion/styled'
 const BlueBlock = styled.div`
     width: 100%;
     background-color: #023660;
-    padding: 48px;
-    padding-bottom: 128px;
+    padding: 24px 48px 128px 48px;
 `
+const CovidBanner = styled.div`
+    width: 100%;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #F03265;
+    color: white;
+    border-radius: 8px;
+    padding: 8px;
+    margin-bottom: 24px;
+    text-align: center;
+    font-weight: bold;
+`
+
+const BannerLink = styled.a`
+    color: white;
+
+    :hover {
+        color: #022842;
+    }
+`
+
 const ColumnsPart = styled.div`
     width: 100%;
     max-width: 900px;
@@ -76,6 +97,11 @@ const IndexPage = () => (
     <div>
         <div>
             <BlueBlock>
+                <CovidBanner>
+                Beginning May 30th, 2020, the UW iSchool team will no longer be supporting or maintaining 
+                this platform. The project owner will be Charles Douglas, who can be reached 
+                at <BannerLink href="mailto:charles@commonpurposenow.org">here</BannerLink>.
+                </CovidBanner>
                 <ColumnsPart>
                     <ColumnsImageContainer>
                         <ColumnsImage />

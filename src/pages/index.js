@@ -9,7 +9,7 @@ import styled from '@emotion/styled'
 const BlueBlock = styled.div`
     width: 100%;
     background-color: #023660;
-    padding: 24px 48px 128px 48px;
+    padding: 24px 24px 128px 24px;
 `
 const CovidBanner = styled.div`
     width: 100%;

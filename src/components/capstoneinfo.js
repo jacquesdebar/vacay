@@ -141,7 +141,7 @@ export default function CapstoneInfo() {
               alt="jacques"
           />
           <p>
-            Jacques is a music enthusiest who loves to listen to new music. He is also from portland, Maine
+            Jacques is a music enthusiast who loves to listen to new music. He is also from portland, Maine
           </p>
           </a>
         </Box>

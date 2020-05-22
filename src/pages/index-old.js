@@ -9,9 +9,9 @@ import { makeStyles } from "@material-ui/core/styles";
 import Box from "@material-ui/core/Box";
 import Button from "@material-ui/core/Button";
 import CapstoneInfo from "../components/capstoneinfo";
-import { useIdentityContext } from "react-netlify-identity";
+// import { useIdentityContext } from "react-netlify-identity";
 
-import IdentityModal from "react-netlify-identity-widget";
+// import IdentityModal from "react-netlify-identity-widget";
 
 
 const useStyles = makeStyles(theme => ({
@@ -164,7 +164,7 @@ const IndexPage = () => {
           className={classes.topImg}
             src="https://i.imgur.com/9zii9E7.jpg"
             alt="democracy"
-        />
+        /> 
         <Box style={{
           display: "flex",
           flexDirection: "column",
@@ -345,10 +345,6 @@ const IndexPage = () => {
           <CapstoneInfo />
         </Box>
       </Box>
-      <IdentityModal
-        showDialog={popup}
-        onCloseDialog={() => changePopup(false)}
-      />
     </Layout>
   );
 }

@@ -4,9 +4,9 @@ import Box from "@material-ui/core/Box";
 import Button from "@material-ui/core/Button";
 import CapstoneInfo from "../components/capstoneinfo";
 import Layout from "../components/layout";
-import { useIdentityContext } from "react-netlify-identity";
+// import { useIdentityContext } from "react-netlify-identity";
 
-import IdentityModal from "react-netlify-identity-widget";
+// import IdentityModal from "react-netlify-identity-widget";
 
 
 const useStyles = makeStyles(theme => ({
@@ -344,10 +344,6 @@ export default function Landing() {
           <CapstoneInfo />
         </Box>
       </Box>
-      <IdentityModal
-        showDialog={popup}
-        onCloseDialog={() => changePopup(false)}
-      />
     </Layout>
   );
 }

@@ -20,7 +20,7 @@ const FooterDiv = styled.div`
     padding: 24px;
     padding-bottom: 12px;
 
-    @media (max-width: 900px) {
+    @media (max-width: 600px) {
         flex-direction: column;
     }
 `
@@ -112,7 +112,7 @@ const Footer = ({ classes }) => {
     return (
         <OverallFooter>
             <FooterDiv>
-                <FooterArea>
+                {/*<FooterArea>
                     <FooterHeading>Join the list</FooterHeading>
                     <FooterBody>
                         Need more information? Subscribe to our monthly newsletter to recieve updates
@@ -140,7 +140,7 @@ const Footer = ({ classes }) => {
                         }}
                         />
                     </form>
-                </FooterArea>
+                    </FooterArea>*/}
                 <FooterArea>
                     <FooterHeading>Contact</FooterHeading>
                     <FooterBody>

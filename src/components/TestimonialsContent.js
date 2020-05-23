@@ -5,7 +5,6 @@ import NateImage from "./images/NateImage"
 import TaraImage from "./images/TaraImage"
 import FaizaImage from "./images/FaizaImage"
 
-
 const TestimonialsPageContainer = styled.div`
     width: 90%;
     max-width: 600px;

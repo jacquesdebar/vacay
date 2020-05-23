@@ -63,7 +63,7 @@ const TrainingCardDescription = styled.p`
 
 const TrainingPage = ({ data }) => (
     <Layout>
-        <SEO title="Testimonials" />
+        <SEO title="Training" />
         <TrainingContainer>
             <TrainingHeader>
                 Training modules

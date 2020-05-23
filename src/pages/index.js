@@ -1,10 +1,11 @@
 import React from "react"
 import Layout from "../components/layout"
-import ColumnsImage from "../components/ColumnsImage"
-import MicImage from "../components/MicImage"
+import ColumnsImage from "../components/Images/ColumnsImage"
+import MicImage from "../components/Images/MicImage"
 import SEO from "../components/seo"
 import Button from "@material-ui/core/Button"
 import styled from '@emotion/styled'
+import { useIdentityContext } from "react-netlify-identity-widget"
 
 const BlueBlock = styled.div`
     width: 100%;
@@ -91,7 +92,12 @@ const MidText = styled.h2`
 `
 
 
-const IndexPage = () => (
+const IndexPage = () => {
+    
+  const identity = useIdentityContext()
+  console.log("This is the index page.")
+
+    return (
   <Layout>
     <SEO title="Home" />
     <div>
@@ -133,6 +139,6 @@ const IndexPage = () => (
         </div>
     </div>
   </Layout>
-)
+)}
 
 export default IndexPage

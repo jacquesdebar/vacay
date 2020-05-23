@@ -1,9 +1,9 @@
 import React from "react";
 import styled from '@emotion/styled'
 
-import NateImage from "./NateImage"
-import TaraImage from "./TaraImage"
-import FaizaImage from "./FaizaImage"
+import NateImage from "./images/NateImage"
+import TaraImage from "./images/TaraImage"
+import FaizaImage from "./images/FaizaImage"
 
 
 const TestimonialsPageContainer = styled.div`

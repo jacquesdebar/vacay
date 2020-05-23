@@ -4,6 +4,9 @@ import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
 
+import IdentityModal, { useIdentityContext } from "react-netlify-identity-widget"
+import "react-netlify-identity-widget/styles.css" // delete if you want to bring your own CSS
+
 const NavItem = styled(Link)`
   text-decoration: none;
   color: #023660;
@@ -72,11 +75,27 @@ border-radius: 5px;
 `
 
 const NavbarLinks = () => {
+  const identity = useIdentityContext()
+  const [dialog, setDialog] = React.useState(false)
+  const name =
+    (identity && identity.user && identity.user.user_metadata && identity.user.user_metadata.name) || "NoName"
+
+  console.log(JSON.stringify(identity))
+  const isLoggedIn = identity && identity.isLoggedIn
+
   return (
     <>
       <NavItem to="/about">About</NavItem>
-      <NavItem to="/training">Training</NavItem>
-      <NavButton to="/">Log In</NavButton>
+      {isLoggedIn ? (
+        <>
+          <NavItem to="/training">Training</NavItem>
+          <NavButton onClick={() => identity.logoutUser()}>Log Out</NavButton>
+        </>
+      ) : (
+        <NavButton onClick={() => setDialog(true)}>Log In</NavButton>
+      )}
+      
+      <IdentityModal showDialog={dialog} onCloseDialog={() => setDialog(false)} />
     </>
   )
 }

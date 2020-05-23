@@ -29,9 +29,21 @@ module.exports = {
     },
     `gatsby-plugin-emotion`,
     'gatsby-plugin-styled-components',
+    {
+      resolve: `gatsby-source-drupal`,
+      options: {
+        baseUrl: `https://dev-vacayfordemocracy.pantheonsite.io/`,
+      },
+    },
     
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-plugin-netlify-identity`,
+      options: {
+        url: `https://vacay-dem.netlify.app/` // required!
+      }
+    }
   ],
 }

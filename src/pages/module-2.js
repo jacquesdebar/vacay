@@ -4,7 +4,7 @@ import SEO from "../components/seo"
 import styled from '@emotion/styled'
 import Button from "@material-ui/core/Button"
 
-import WhatsNextChartImage from "../components/images/WhatsNextChartImage"
+import WhatsNextChartImage from "../components/WhatsNextChartImage"
 
 const ModuleContainer = styled.div`
     width: 90%;

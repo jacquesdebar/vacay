@@ -1,8 +1,8 @@
 import React from "react";
 import styled from '@emotion/styled'
 
-import ColumnsImage from "./images/ColumnsImage"
-import MicManImage from "./images/MicManImage"
+import ColumnsImage from "./ColumnsImage"
+import MicManImage from "./MicManImage"
 
 const AboutContainer = styled.div`
     width: 90%;

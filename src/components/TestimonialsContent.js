@@ -1,9 +1,9 @@
 import React from "react";
 import styled from '@emotion/styled'
 
-import NateImage from "./images/NateImage"
-import TaraImage from "./images/TaraImage"
-import FaizaImage from "./images/FaizaImage"
+import NateImage from "./NateImage"
+import TaraImage from "./TaraImage"
+import FaizaImage from "./FaizaImage"
 
 const TestimonialsPageContainer = styled.div`
     width: 90%;
